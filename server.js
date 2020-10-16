@@ -18,8 +18,6 @@ app.use(cors());
 // app.use(bodyParser.urlencoded({ extended: true }))
 // app.use(bodyParser.json());
 
-// void app.use((req, res) => { global.req = req; global.res = res; })
-
 app.use((req, res) => {
   streamToString(req).then(body => {
     console.log(`${req.method} ${req.url} HTTP/${req.httpVersion}`);
